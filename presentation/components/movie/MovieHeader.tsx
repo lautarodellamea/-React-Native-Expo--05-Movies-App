@@ -1,14 +1,14 @@
-import { router } from 'expo-router';
+import { router } from "expo-router";
 import {
   View,
   Text,
   useWindowDimensions,
   Image,
   Pressable,
-} from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from "expo-linear-gradient";
 
 interface Props {
   poster: string;
@@ -21,22 +21,22 @@ const MovieHeader = ({ poster, originalTitle, title }: Props) => {
 
   return (
     <>
-      {/* Gradiente */}
+      {/* Gradiente - para que se vea la flecha de regreso */}
       <LinearGradient
-        colors={['rgba(0,0,0,0.3)', 'transparent']}
+        colors={["rgba(0,0,0,0.3)", "transparent"]}
         start={[0, 0]}
         style={{
           height: screenHeight * 0.4,
-          position: 'absolute',
+          position: "absolute",
           zIndex: 1,
-          width: '100%',
+          width: "100%",
         }}
       />
 
       {/* Botón de regreso */}
       <View
         style={{
-          position: 'absolute',
+          position: "absolute",
           zIndex: 99,
           elevation: 9,
           top: 40,
